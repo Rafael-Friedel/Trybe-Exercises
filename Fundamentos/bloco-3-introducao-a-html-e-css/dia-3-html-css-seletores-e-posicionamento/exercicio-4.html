@@ -3,24 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Pseudoclasses</title>
-  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="">
 </head>
+<style>
+h3:hover{
+  border: 2px solid red;
+}
+
+h3:nth-child(odd){
+  font-style: italic;
+}
+
+h3:nth-child(1) {
+  background-color: blue ;
+  color: white;
+}
+
+h3:nth-child(2) {
+  background-color: orange ;
+  color: white;
+}
+h3:nth-child(3) {
+  background-color:yellowgreen ;
+  color: white;
+}
+h3:nth-child(4) {
+  background-color:black;
+  color: white;
+}
+h3:nth-child(5) {
+  background-color: silver ;
+  color: black;
+}
+</style>
+
 <body>
   <h1>Paleta de Cores</h1>
   <p>Vamos criar uma paleta de cores com as divs abaixo:</p>
   <div>
     <h3>Cor primária</h3>
-  </div>
-  <div>
+  
+  
     <h3>Cor Secundária</h3>
-  </div>
-  <div>
-    <h3>Cor Complementar</h3>
-  </div>
-  <div>
+  
+  
+    <h3 style="font-size: 30px;">Cor Complementar</h3>
+  
+  
     <h3>Cor Escura</h3>
-  </div>
-  <div>
+  
     <h3>Cor Clara</h3>
   </div>
 </body>
