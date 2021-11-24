@@ -1,7 +1,8 @@
 
-      h1 {
+      h1, h3, section {
         text-align: center;
-      }
+        margin: 5px;
+              }
 
       .first {
         background-color: rgb(235, 200, 84);
@@ -9,6 +10,9 @@
         height: 50px;
         text-align: center;
         width: 200px;
+        display: block;
+        margin-left: 44%;
+        
       }
 
       .second {
@@ -17,6 +21,11 @@
         height: 50px;
         text-align: center;
         width: 300px;
+
+        left: 170px;
+        top: 107px;
+      
+      
       }
 
       .third {
@@ -25,6 +34,16 @@
         height: 50px;
         text-align: center;
         width: 300px;
+        
+        top: 107px;
+        margin-bottom: 10px;
       }
+      
+      li {
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+      }
+      
 
     
