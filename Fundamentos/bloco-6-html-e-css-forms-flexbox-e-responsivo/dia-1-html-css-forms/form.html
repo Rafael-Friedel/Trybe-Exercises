@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Dados Pessoais </legend>
+            
+            <label for="nome">Nome: </label>
+            <input type="text" class="input" maxlength="40" id="nome" name="Nome" placeholder="Digite aqui seu nome Completo!" required>
+           <p></p>
+            <label for="email">E-mail:</label>
+            <input class="input" type="text" id="email" name="e-mail" placeholder="Digite aqui seu e-mail" required maxlength="50">
+            <p></p>
+            <label for="cpf">CPF:</label>
+            <input class="input" type="text" id="cpf" name="CPF" placeholder="Digite aqui seu CPF" required maxlength="11">
+            <p></p>
+            <label for="endereço">Endereço:</label>
+            <input class="input" type="text" id="endereço" name="Endereço" placeholder="Digite aqui seu Endereço" required maxlength="200">
+            <p></p>
+            <label for="city">Cidade:</label>
+            <input class="input" type="text" id="city" name="cidade" placeholder="Digite aqui sua cidade" required maxlength="28">
+            <p></p>
+            <label for="estado">Selecione seu Estado</label>
+            <select name="Estado" id="estado" required>
+                <option selected value="am">Amapá</option>
+            </select>
+            <p></p>
+            <input type="radio" name="moradia" id="casa" checked> Casa
+            <input type="radio" name="moradia" id="apartamento"> Apartamento
+            <p></p>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
