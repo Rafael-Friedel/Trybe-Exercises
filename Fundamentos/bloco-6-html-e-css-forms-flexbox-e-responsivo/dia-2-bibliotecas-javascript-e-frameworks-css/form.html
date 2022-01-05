@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Dados Pessoais </legend>
+            
+            <label for="nome">Nome: </label>
+            <input type="text" class="input" maxlength="40" id="nome" name="Nome" placeholder="Digite aqui seu nome Completo!" required autofocus>
+           <p></p>
+            <label for="email">E-mail:</label>
+            <input class="input" type="text" id="email" name="e-mail" placeholder="Digite aqui seu e-mail" required maxlength="50">
+            <p></p>
+            <label for="cpf">CPF:</label>
+            <input class="input" type="text" id="cpf" name="CPF" placeholder="Digite aqui seu CPF" required maxlength="11">
+            <p></p>
+            <label for="endereço">Endereço:</label>
+            <input class="input" type="text" id="endereço" name="Endereço" placeholder="Digite aqui seu Endereço" required maxlength="200">
+            <p></p>
+            <label for="city">Cidade:</label>
+            <input class="input" type="text" id="city" name="cidade" placeholder="Digite aqui sua cidade" required maxlength="28">
+            <p></p>
+            <label for="estado" >Selecione seu Estado</label>
+            <select name="Estado" id="estado" required class="input">
+                <option selected value="am">Amapá</option>
+            </select>
+            <p></p>
+            Você mora em:
+            <input type="radio" name="moradia" value="casa" checked class="input"> Casa
+            <input type="radio" name="moradia" value="apartamento" class="input"> Apartamento
+            <p></p>
+        </fieldset>
+        <fieldset>
+            <legend>Dados do Último emprego</legend>
+            Resumo do currículo
+            <br>
+            <textarea name="resumo" id="textarea" cols="30" rows="3" maxlength="1000" class="input"></textarea>
+            <p></p>
+            <label for="cargo">Cargo:</label>
+            <input class="input" type="text" id="cargo" name="cargo" placeholder="Digite aqui seu último cargo" required maxlength="500">
+            <p></p>
+            <label for="desc-cargo">Descrição do Cargo:</label>
+            <input class="input" type="text" id="desc-cargo" name="descriçãodocargo" placeholder="Digite aqui a descrição do cargo" required maxlength="500">
+            <p></p>
+            <label for="date">Data de inicio</label>
+            <input type="date" name="date" id="date" class="input" required>
+        </fieldset>
+        <button type="submit" id="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <div id="conteudo-forms"></div>
+    <script src="script.js"></script>
+</body>
+</html>
