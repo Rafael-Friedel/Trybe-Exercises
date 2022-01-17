@@ -17,7 +17,7 @@ const {
       const { userName, password } = user;
   
       expect(verifyCredentials({ userName, password })).toBe(
-        "Hello, Joana! Que bom ter você de volta"
+        `Hello, Bob! Que bom ter você de volta`
       ); 
     });
   

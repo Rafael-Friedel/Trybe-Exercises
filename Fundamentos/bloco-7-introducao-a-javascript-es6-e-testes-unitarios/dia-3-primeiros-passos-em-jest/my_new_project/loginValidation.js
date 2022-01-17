@@ -8,12 +8,12 @@ const greetingMessage = (user) => {
   };
   
   const user = {
-    userName: "Joana",
+    userName: "Bob",
     password: 123456,
   };
   
   const verifyCredentials = ({ userName, password }) => {
-    if (password === 123456 && userName === "Joana") {
+    if (password === 123456 && userName === "Bob") {
       return greetingMessage(userName);
     } else {
       return loginErrorMessage(userName);
