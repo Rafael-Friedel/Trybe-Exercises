@@ -149,4 +149,10 @@ const fantasyOrScienceFictionAuthors = (func, arr) => func(arr).map((obj) => obj
 //       .map((book) => book.author.name).sort();
 //   } GABARITO TRYBE
 
-console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction,books));
+// console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction,books));
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const oldBooks = (func, arr) => func(arr).map((obj) => obj.name)
+
+console.log(oldBooks(oldBooksOrdered,books));
