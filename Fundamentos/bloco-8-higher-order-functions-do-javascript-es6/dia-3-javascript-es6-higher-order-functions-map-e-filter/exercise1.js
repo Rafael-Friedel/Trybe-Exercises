@@ -135,3 +135,18 @@ const fantasyOrScienceFiction = (book) => book.filter((obj) => obj.genre === 'Fa
 const oldBooksOrdered = (book) => book.filter((obj) => (obj.releaseYear < 1961)).sort((obj1,obj2) => obj1.releaseYear - obj2.releaseYear)
 
 // console.log(oldBooksOrdered(books));
+
+// 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+
+
+const fantasyOrScienceFictionAuthors = (func, arr) => func(arr).map((obj) => obj.author.name).sort() //MINHA RESPOSTA
+
+// function fantasyOrScienceFictionAuthors() {
+//     const wantedGenres = ['Fantasia', 'Ficção Científica'];
+//     return books
+//       .filter((book) => wantedGenres.includes(book.genre))
+//       .map((book) => book.author.name).sort();
+//   } GABARITO TRYBE
+
+console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction,books));
