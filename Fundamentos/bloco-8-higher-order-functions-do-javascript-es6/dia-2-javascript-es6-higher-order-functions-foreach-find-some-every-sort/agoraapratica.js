@@ -108,7 +108,7 @@ const everyoneWasBornOnSecXX = (book) => book.every((object) => object.author.bi
 // console.log(everyoneWasBornOnSecXX(books));
 
 
-const someBookWasReleaseOnThe80s = (book) => book.some((object) => object.releaseYear >= 1980 && object.releaseYear < 1990);
+const someBookWasReleaseOnThe80s = (book) => book.some((object) => object.releaseYear > 1979 && object.releaseYear < 1990);
 
 // console.log(someBookWasReleaseOnThe80s(books));
 
@@ -118,6 +118,7 @@ const someBookWasReleaseOnThe80s = (book) => book.some((object) => object.releas
 
 const authorUnique = (book) => {
   return book.every((object1) =>
+    //book.some((object2)
     !book.some((object2) =>
       (object2.author.birthYear === object1.author.birthYear)
       && (object2.author.name !== object1.author.name)));
