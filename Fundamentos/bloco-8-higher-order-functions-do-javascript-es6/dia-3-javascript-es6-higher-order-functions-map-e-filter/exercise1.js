@@ -127,5 +127,11 @@ const nameAndAge = (book) => {
 
 const fantasyOrScienceFiction = (book) => book.filter((obj) => obj.genre === 'Fantasia' || obj.genre === 'Ficção Científica')
 
-console.log(fantasyOrScienceFiction(books));
+// console.log(fantasyOrScienceFiction(books));
 
+// 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+// Dica: use as funções filter e sort
+
+const oldBooksOrdered = (book) => book.filter((obj) => (obj.releaseYear < 1961)).sort((obj1,obj2) => obj1.releaseYear - obj2.releaseYear)
+
+// console.log(oldBooksOrdered(books));
