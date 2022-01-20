@@ -105,5 +105,10 @@ const booksOrderedByReleaseYearDesc = (book) => book.sort((object1, object2) => 
 
 const everyoneWasBornOnSecXX = (book) => book.every((object) => object.author.birthYear > 1900 && object.author.birthYear < 2001)
 
-console.log(everyoneWasBornOnSecXX(books));
+// console.log(everyoneWasBornOnSecXX(books));
   
+
+const someBookWasReleaseOnThe80s = (book) =>  book.some((object) => object.releaseYear >= 1980 && object.releaseYear <= 1990)
+
+console.log(someBookWasReleaseOnThe80s(books));
+ 
