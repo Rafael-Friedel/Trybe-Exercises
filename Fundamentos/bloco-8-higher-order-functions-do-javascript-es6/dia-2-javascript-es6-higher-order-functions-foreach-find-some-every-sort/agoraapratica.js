@@ -101,4 +101,9 @@ const getNamedBook = (book) => book.find((object) => object.name.length === 26);
 
 const booksOrderedByReleaseYearDesc = (book) => book.sort((object1, object2) => object2.releaseYear - object1.releaseYear);
 
-console.log(booksOrderedByReleaseYearDesc(books));
+// console.log(booksOrderedByReleaseYearDesc(books));
+
+const everyoneWasBornOnSecXX = (book) => book.every((object) => object.author.birthYear > 1900 && object.author.birthYear < 2001)
+
+console.log(everyoneWasBornOnSecXX(books));
+  
