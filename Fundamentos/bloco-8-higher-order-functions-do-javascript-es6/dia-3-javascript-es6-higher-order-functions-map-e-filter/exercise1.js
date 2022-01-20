@@ -111,13 +111,13 @@ const formatedBookNames = (book) => book.map((object) => `${object.name} - ${obj
 // ];
 
 const nameAndAge = (book) => {
-   return book.map((object) => (
-       {
+    return book.map((object) => (
+        {
             author: object.author.name,
             age: object.releaseYear - object.author.birthYear,
         })
     )
-    .sort((obj1, obj2) => obj1.age - obj2.age);
+        .sort((obj1, obj2) => obj1.age - obj2.age);
 };
 
 // console.log(nameAndAge(books))
@@ -132,7 +132,7 @@ const fantasyOrScienceFiction = (book) => book.filter((obj) => obj.genre === 'Fa
 // 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
 // Dica: use as funções filter e sort
 
-const oldBooksOrdered = (book) => book.filter((obj) => (obj.releaseYear < 1961)).sort((obj1,obj2) => obj1.releaseYear - obj2.releaseYear)
+const oldBooksOrdered = (book) => book.filter((obj) => (obj.releaseYear < 1961)).sort((obj1, obj2) => obj1.releaseYear - obj2.releaseYear)
 
 // console.log(oldBooksOrdered(books));
 
@@ -155,4 +155,14 @@ const fantasyOrScienceFictionAuthors = (func, arr) => func(arr).map((obj) => obj
 
 const oldBooks = (func, arr) => func(arr).map((obj) => obj.name)
 
-console.log(oldBooks(oldBooksOrdered,books));
+// console.log(oldBooks(oldBooksOrdered,books));
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
+// Dica: cada inicial termina com um ponto.
+
+const authorWith3DotsOnName = (book) => {
+   return book.find((obj) => (obj.author.name.split(' ')
+        .filter((text) => text.endsWith('.')).length === 3)).name
+}
+
+console.log(authorWith3DotsOnName(books));
