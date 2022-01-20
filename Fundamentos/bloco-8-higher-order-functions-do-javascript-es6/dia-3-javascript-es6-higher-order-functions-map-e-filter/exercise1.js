@@ -113,8 +113,8 @@ const formatedBookNames = (book) => book.map((object) => `${object.name} - ${obj
 const nameAndAge = (book) => {
     return book.map((object) => (
         {
-            author: object.author.name,
             age: object.releaseYear - object.author.birthYear,
+            author: object.author.name,
         })
     )
         .sort((obj1, obj2) => obj1.age - obj2.age);
@@ -165,4 +165,4 @@ const authorWith3DotsOnName = (book) => {
         .filter((text) => text.endsWith('.')).length === 3)).name
 }
 
-console.log(authorWith3DotsOnName(books));
+// console.log(authorWith3DotsOnName(books));
