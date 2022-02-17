@@ -17,13 +17,13 @@ class Pokemon extends React.Component {
 }
 
 Pokemon.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   averageWeight: PropTypes.shape({
     value: PropTypes.number,
     measurementUnit: PropTypes.string,
-  }),
-  image: PropTypes.string,
+  }).isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 export default Pokemon;
