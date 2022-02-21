@@ -5,9 +5,9 @@ import pokemons from './data';
 class Pokedex extends React.Component {
   render(){
     return (
-        <ol>
+        <ul>
          {pokemons.map((pokemon) => <Pokemon key={pokemon.id} data={pokemon}/>)}
-        </ol>
+        </ul>
     )
   }
 }
