@@ -1,0 +1,31 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  text-align: center;
+  background-color: rgb(128, 194, 28);
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  padding: 10px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: rgb(204, 219, 136);
+  margin: 20px;
+  width: 25%;
+  justify-content: space-around;
+}
+
+img {
+  background-color: white;
+  border-radius: 100px;
+}
