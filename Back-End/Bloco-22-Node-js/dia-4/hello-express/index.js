@@ -33,6 +33,16 @@ app.get('/recipes/:id', function (req, res) {
     res.status(200).json(recipe);
   });
 
+app.get('/drinks/:id', function (req, res) {
+    const { id } = req.params;
+    const drink = drinks.find((d) => d.id === Number(id));
+  
+    if (!drink) return res.status(404).json({ message: 'Recipe not found!'});
+  
+    res.status(200).json(drink);
+  });
+
+
 app.get('/hello', handleHelloWorldRequest); 
 
 
