@@ -42,6 +42,12 @@ app.get('/drinks/:id', function (req, res) {
     res.status(200).json(drink);
   });
 
+app.get('/recipes/search', function (req, res) {
+    const { name } = req.query;
+    const filteredRecipes = recipes.filter((r) => r.name.includes(name));
+    res.status(200).json(filteredRecipes);
+  });
+
 
 app.get('/hello', handleHelloWorldRequest); 
 
