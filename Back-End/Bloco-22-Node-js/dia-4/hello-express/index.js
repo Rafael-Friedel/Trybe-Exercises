@@ -48,6 +48,11 @@ app.get('/recipes/search', function (req, res) {
     res.status(200).json(filteredRecipes);
   });
 
+  app.get('/drinks/search', function (req, res) {
+    const { name } = req.query;
+    const filtereddrinks = drinks.filter((d) => d.name.includes(name));
+    res.status(200).json(filtereddrinks);
+  });
 
 app.get('/hello', handleHelloWorldRequest); 
 
