@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.use(express.json())
 
 const recipes = [
     { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
@@ -56,13 +57,19 @@ app.get('/recipes/search', function (req, res) {
 
 app.get('/hello', handleHelloWorldRequest); 
 
+app.post('/drinks/add', (req, res) => {
+  const { name, price } = req.body;
+  drinks.push({name, price});
+  res.send(`Bebida ${name} adicionada com sucesso`)
+})
+
 
 
 
 app.listen(3001, () => {
   console.log('Aplicação ouvindo na porta 3001');
-}); // 3
+});
 
 function handleHelloWorldRequest(req, res) {
-  res.status(200).send('Hello World'); // 4
+  res.status(200).send('Hello World');
 }
