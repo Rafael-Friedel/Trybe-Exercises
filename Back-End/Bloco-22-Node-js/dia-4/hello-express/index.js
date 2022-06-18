@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 app.use(express.json())
+let id = 4;
 
 const recipes = [
     { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
@@ -61,6 +62,13 @@ app.post('/drinks/add', (req, res) => {
   const { name, price } = req.body;
   drinks.push({name, price});
   res.send(`Bebida ${name} adicionada com sucesso`)
+})
+
+app.post('/recipes/add', (req, res) => {
+  const { name, price, waitTime } = req.body;
+  recipes.push({id, name, price, waitTime});
+  id++
+  res.send(`receita ${name} adicionada com sucesso`)
 })
 
 
