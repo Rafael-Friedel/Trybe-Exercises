@@ -71,6 +71,17 @@ app.post('/recipes/add', (req, res) => {
   res.send(`receita ${name} adicionada com sucesso`)
 })
 
+app.put('/recipes/:id', (req, res) => {
+  const { id } = req.params;
+  const { name, price } = req.body;
+  const recipeIndex = recipes.findIndex((r) => r.id === Number(id));
+
+  if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+
+  recipes[recipeIndex] = { ...recipes[recipeIndex], name, price };
+
+  res.status(204).end();
+});
 
 
 
