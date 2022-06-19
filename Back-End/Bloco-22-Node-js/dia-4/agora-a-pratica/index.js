@@ -38,10 +38,25 @@ app.get('/simpsons/:id', async (req, res) => {
   try {
     const simpsons = await getSimpsons();
     const simpson = simpsons.find((s) => s.id === id );
-    if(!simpson) res.status(404).json({ message: 'simpson not found'})
+    if(!simpson) return res.status(404).json({ message: 'simpson not found'})
     return res.status(202).json(simpson);
   } catch (error) {
       return res.status(500).end();
+  }
+})
+
+app.post('/simpsons/add', async (req, res) => {
+  try {
+    const { id, name } = req.body;
+    const simpsons = await getSimpsons();
+    const exist = simpsons.some((s) => Number(s.id) === Number(id))
+    if (exist) return res.status(409).json({ message: 'id already exists'})
+    const string = String(id)
+    simpsons.push({ id: string, name })
+    await setSimpsons(simpsons)
+    return res.status(204).end()
+  } catch (error){
+    return res.status(500).end()
   }
 })
 
