@@ -27,7 +27,6 @@ app.put('/users/:name/:age',(req, res) => {
 app.get('/simpsons', async (req, res) => {
   try {
     const simpsons = await getSimpsons();
-
     return res.status(200).json(simpsons);
   } catch (error) {
     return res.status(500).end();
